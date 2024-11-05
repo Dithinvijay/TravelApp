@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.travelapp">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/travel_app_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/travel_app_logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+
+        <activity android:name="com.example.travelapp.CityDetails">
+
+        </activity>
+        <activity android:name="com.example.travelapp.CityItem"
+            tools:ignore="Instantiatable" />
+        <activity android:name="com.example.travelapp.Details">
+
+        </activity>
+        <activity
+            android:name="com.example.travelapp.MainActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            tools:ignore="RedundantLabel">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <activity android:name="com.example.travelapp.NoteEdit"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.travelapp.NoteActivity"
+               />
+        </activity>
+        <activity
+            android:name="com.example.travelapp.NoteDetail"
+            android:label="@string/title_activity_detail"
+            android:parentActivityName="com.example.travelapp.NoteActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.travelapp.NoteActivity" />
+        </activity>
+        <activity android:name="com.example.travelapp.NoteAdd"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.travelapp.NoteActivity"
+               />
+        </activity>
+        <activity android:name="com.example.travelapp.NoteActivity"
+            android:label="@string/Note_Title"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+
+
+
+
+    </application>
+
+
+
+</manifest>
