@@ -7,10 +7,6 @@ class CountryItem {
     var keyId: String? = null
     var favStatus: String? = null
 
-    // Default constructor
-    constructor()
-
-    // Constructor with parameters
     constructor(imageResourse: Int, title: String?, keyId: String?, favStatus: String?) {
         this.imageResourse = imageResourse
         this.title = title

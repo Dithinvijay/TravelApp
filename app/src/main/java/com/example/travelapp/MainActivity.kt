@@ -20,7 +20,6 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
         val navView: BottomNavigationView = findViewById(R.id.nav_view)
 
-        // Passing each menu ID as a set of Ids because each menu should be considered as top-level destinations.
         val appBarConfiguration = AppBarConfiguration(setOf(
             R.id.navigation_home,
             R.id.navigation_country,

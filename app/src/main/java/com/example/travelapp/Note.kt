@@ -1,7 +1,7 @@
 package com.example.travelapp
 
 data class Note(
-    var id: Long = 0, // Default value is 0 for the empty constructor
+    var id: Long = 0,
     var title: String = "",
     var content: String = "",
     var date: String = "",

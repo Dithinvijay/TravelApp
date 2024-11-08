@@ -46,7 +46,6 @@ class TravelDB(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, null
         onCreate(db)
     }
 
-    // Create empty table
     fun insertEmpty() {
         val db = writableDatabase
         val cv = ContentValues()
@@ -60,7 +59,6 @@ class TravelDB(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, null
         }
     }
 
-    // Insert data into database
     fun insertIntoTheDatabase(itemTitle: String, itemImage: Int, id: String, favStatus: String) {
         val db = writableDatabase
         val cv = ContentValues().apply {
@@ -73,36 +71,18 @@ class TravelDB(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, null
         Log.d("FavDB Status", "$itemTitle, favstatus - $favStatus - . $cv")
     }
 
-    fun insertIntoTheDatabase(itemTitle1: String, countryTitle: String, itemImage1: Int, id: String, populationTitle: String, cityDesc: String, airportTitle: String) {
-        val db = writableDatabase
-        val cv = ContentValues().apply {
-            put(ITEM_TITLE1, itemTitle1)
-            put(COUNTRY_NAME, countryTitle)
-            put(ITEM_IMAGE1, itemImage1)
-            put(KEY_ID1, id)
-            put(POPULATION_TITLE, populationTitle)
-            put(CITY_DESC, cityDesc)
-            put(AIRPORT_TITLE, airportTitle)
-        }
-        db.insert(TABLE_NAME1, null, cv)
-        Log.d("TravelDB Status", "$itemTitle1, city - $populationTitle - . $cv")
-    }
-
-    // Read all favorite data
-    public fun readAllData(id: String): Cursor {
+    fun readAllData(id: String): Cursor {
         val db = readableDatabase
         val sql = "SELECT * FROM $TABLE_NAME WHERE $KEY_ID = $id"
         return db.rawQuery(sql, null)
     }
 
-    // Read all city data
     fun readAllCityData(id: String): Cursor {
         val db = readableDatabase
         val sql = "SELECT * FROM $TABLE_NAME1 WHERE $KEY_ID1 = $id"
         return db.rawQuery(sql, null)
     }
 
-    // Remove line from database
     fun removeFav(id: String) {
         val db = writableDatabase
         val sql = "UPDATE $TABLE_NAME SET $FAVORITE_STATUS = '0' WHERE $KEY_ID = $id"
@@ -110,7 +90,6 @@ class TravelDB(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, null
         Log.d("remove", id)
     }
 
-    // Select all favorite list
     fun selectAllFavoriteList(): Cursor {
         val db = readableDatabase
         val sql = "SELECT * FROM $TABLE_NAME WHERE $FAVORITE_STATUS = '1'"

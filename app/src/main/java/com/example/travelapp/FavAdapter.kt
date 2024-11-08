@@ -28,7 +28,6 @@ class FavAdapter(
         holder.favTextView.text = favItem.item_title
         holder.favImageView.setImageResource(favItem.item_image)
 
-        // Set on click for favorite countries
         holder.relative.setOnClickListener {
             val intent = Intent(context, Details::class.java).apply {
                 putExtra("image", favItem.item_image)
@@ -49,7 +48,6 @@ class FavAdapter(
         val relative: RelativeLayout = itemView.findViewById(R.id.relative)
 
         init {
-            // After click, remove from favorite
             favBtn.setOnClickListener {
                 val position = adapterPosition
                 val favItem = favItemList[position]

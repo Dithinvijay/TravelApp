@@ -21,7 +21,6 @@ class SimpleDatabase(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME
         private const val KEY_TIME = "time"
     }
 
-    // Creating tables
     override fun onCreate(db: SQLiteDatabase) {
         val createDb = ("CREATE TABLE $TABLE_NAME ("
                 + "$KEY_ID INTEGER PRIMARY KEY,"
@@ -32,7 +31,6 @@ class SimpleDatabase(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME
         db.execSQL(createDb)
     }
 
-    // Upgrade DB if older version exists
     override fun onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) {
         if (oldVersion >= newVersion) return
 
@@ -49,7 +47,6 @@ class SimpleDatabase(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME
             put(KEY_TIME, note.time)
         }
 
-        // Inserting data into DB
         return db.insert(TABLE_NAME, null, values)
     }
 
@@ -94,7 +91,7 @@ class SimpleDatabase(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME
             } while (cursor.moveToNext())
         }
 
-        cursor.close() // Don't forget to close the cursor
+        cursor.close()
         return allNotes
     }
 

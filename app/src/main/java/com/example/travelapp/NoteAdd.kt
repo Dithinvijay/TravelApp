@@ -47,7 +47,6 @@ class NoteAdd : AppCompatActivity() {
             override fun afterTextChanged(s: Editable?) {}
         })
 
-        // Current date & time
         calendar = Calendar.getInstance()
         todaysDate = "${calendar.get(Calendar.YEAR)}/${calendar.get(Calendar.MONTH) + 1}/${calendar.get(Calendar.DAY_OF_MONTH)}"
         Log.d("DATE", "Date: $todaysDate")
