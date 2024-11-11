@@ -5,4 +5,16 @@
   <li>
     <b>City Details:</b> Displays detailed information on cities including population, descriptions, airports, and country.
   </li>
+  <li>
+    <b>Favorite Destinations:</b> Allows users to mark cities as favorites and easily access them from a separate list.
+  </li>
+  <li>
+    <b>Notes Section:</b> Users can add, edit, delete, and view notes related to their travels.
+  </li>
+  <li>
+    <b>Custom UI:</b> Responsive and user-friendly interface for an immersive experience.
+  </li>
+  <li>
+    <b>Data Persistence:</b> Stores favorite destinations and notes in an SQLite database.
+  </li>
 </ul>
