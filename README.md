@@ -18,3 +18,18 @@
     <b>Data Persistence:</b> Stores favorite destinations and notes in an SQLite database.
   </li>
 </ul>
+<h3>Technologies Used</h3>
+<ul>
+  <li>
+    <b>Kotlin:</b> The primary programming language for the app.
+  </li>
+  <li>
+    <b>SQLite:</b> Used for local data storage in two tables - favoriteTable for favorite destinations and cityTable for city details.
+  </li>
+  <li>
+    <b>Android Components:</b> Utilizes Toolbar, RecyclerView, FloatingActionButton, TextView, and EditText components.
+  </li>
+  <li>
+    <b>Material Design:</b> For modern UI elements and better user experience.
+  </li>
+</ul>
