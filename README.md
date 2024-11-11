@@ -3,6 +3,6 @@
 <h3>Features</h3>
 <ul>
   <li>
-    <b>City Details:</b>
+    <b>City Details:</b> Displays detailed information on cities including population, descriptions, airports, and country.
   </li>
 </ul>
